@@ -10,25 +10,19 @@ namespace Snake
     {
         static void Main(string[] args)
         {
-            Point p1 = new Point();
-            p1.x = 1;
-            p1.y = 3;
-            p1.sym = '*';
+            Point p1 = new Point(1, 3, '*');
             p1.Draw();
 
-            Point p2 = new Point();
-            p2.x = 3;
-            p2.y = 7;
-            p2.sym = '#';
+            Point p2 = new Point(4, 5, '#');
             p2.Draw();
+
+            HorizontalLine Hline = new HorizontalLine(5, 10, 8, '+');
+            Hline.Draw();
+
+            VerticallLine Vline = new VerticallLine(10, 5, 12, '+');
+            Vline.Draw();
 
             Console.ReadLine();
         }
-        static void Draw(int x, int y, char sym)
-        {
-            Console.SetCursorPosition(x, y);
-            Console.Write(sym);
-        }
-
     }
 }
